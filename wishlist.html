@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist - Best Anime Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#FF6B6B',
+                        secondary: '#4ECDC4',
+                        accent: '#FFE66D',
+                        dark: '#1a1a2e',
+                        darker: '#16213e',
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        * { scroll-behavior: smooth; }
+        .glass { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); }
+        .glass-dark { background: rgba(26,26,46,0.8); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
+        .gradient-text { background: linear-gradient(135deg,#FF6B6B,#4ECDC4); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+        .btn-gradient { background: linear-gradient(135deg,#FF6B6B,#FF8E53); transition: all 0.3s ease; }
+        .btn-gradient:hover { transform: scale(1.05); box-shadow: 0 10px 30px rgba(255,107,107,0.4); }
+        .notification { animation: slideInRight 0.3s ease-out; }
+        @keyframes slideInRight { from { transform: translateX(100%); opacity:0 } to { transform: translateX(0); opacity:1 } }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-darker transition-colors duration-300">
+    <div id="notification-container" class="fixed top-24 right-4 z-50 space-y-2"></div>
+    <nav class="fixed top-0 left-0 right-0 z-40 glass-dark bg-white/80 dark:bg-darker/90 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="flex items-center space-x-2"><img src="img/BAS_Cat_Logo_500x.webp" alt="Best Anime Shop" class="h-10 w-10 rounded-full"><span class="text-xl font-bold gradient-text hidden sm:block">Best Anime Shop</span></a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors font-medium">Home</a>
+                    <a href="Figure.html" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors font-medium">Figures</a>
+                    <a href="Poster.html" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors font-medium">Posters</a>
+                    <a href="Blind Box.html" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors font-medium">Blind Box</a>
+                    <a href="Clothing.html" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors font-medium">Clothing</a>
+                    <a href="Jewelry.html" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors font-medium">Jewelry</a>
+                    <a href="Contact.html" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors font-medium">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="wishlist.html" class="relative text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">
+                        <i class="fas fa-heart text-xl"></i>
+                        <span id="wishlist-count" class="absolute -top-2 -right-2 bg-primary text-white text-xs rounded-full h-5 w-5 flex items-center justify-center" style="display:none;">0</span>
+                    </a>
+                    <button id="dark-mode-toggle" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors"><i class="fas fa-moon text-xl dark:hidden"></i><i class="fas fa-sun text-xl hidden dark:block"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="pt-24 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">Your <span class="gradient-text">Wishlist</span></h1>
+                <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">Saved favorites appear here so you can review them later.</p>
+            </div>
+            <div id="wishlist-items" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+        </div>
+    </section>
+    <footer class="bg-gray-900 dark:bg-darker text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400">© 2025 Best Anime Shop. All Rights Reserved. Website by Darinhil</p>
+        </div>
+    </footer>
+    <script src="wishlist.js"></script>
+    <script>
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const html = document.documentElement;
+        if (localStorage.getItem('darkMode') === 'true' || (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        }
+        darkModeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.setItem('darkMode', html.classList.contains('dark'));
+        });
+    </script>
+</body>
+</html>

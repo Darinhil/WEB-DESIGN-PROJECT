@@ -3,280 +3,424 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./dist/main.min.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
-<body>
- <!-- Navbar -->
-  <header>
-    <nav class="navbar">
-      <div class="logo"><img src="img/BAS_Cat_Logo_500x.webp" alt="animestore"></div>
-      
-      <ul class="nav-links">
-       <li><a href="./index.html">Home</a></li>
-        <li><a href="/Figure.html">Figure & Statue</a></li>
-        <li><a href="/Poster.html">Poster</a></li>
-        <li><a href="/Blind Box.html">Blind Box</a></li>
-        <li><a href="/Clothing.html">Clothing</a></li>
-        <li><a href="./Jewelry.html">Jewelry</a></li>
-        <li><a href="/Contact.html">Contact</a></li>
-      </ul>
-      <div class="search-box">
-        <input type="text" placeholder="Search for products...">
-        <button><i class="fa fa-search" style="font-size:24px;color:white"></i></button>
-      </div>
-    </nav>
-  </header>
-  <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  background: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-.logo {
-  font-size: 10px;
-  font-weight: bold;
-  color: #e63946;
-}
-.logo img {
-  height: 100px;
-  width: auto;
-}
-.search-box {
-  display: flex;
-}
-.search-box input {
-  padding: 10px 100px;
-  border: 1px solid #ccc;
-  border-radius: 5px 0 0 5px;
-}
-.search-box button {
-  padding: 7px 12px;
-  border: none;
-  background: #e63946;
-  color: #fff;
-  border-radius: 0 4px 4px 0;
-  cursor: pointer;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-}
-.nav-links li {
-  margin-left: 20px;
-}
-.nav-links a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-}
-.nav-links a:hover {
-  color: #e63946;
-}
-.contenter{
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 40px;
-  
-}
-
-  </style>
-</head>
-<body>
-  </section>
+    <title>Contact Us - Best Anime Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#FF6B6B',
+                        secondary: '#4ECDC4',
+                        accent: '#FFE66D',
+                        dark: '#1a1a2e',
+                        darker: '#16213e',
+                    },
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                        'fade-in': 'fadeIn 0.6s ease-out',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
     <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-    }
-    .contact-section {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding: 50px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    .contact-info {
-      flex: 1;
-      padding-right: 40px;
-    }
-    .contact-info h2 {
-      color: #e60000;
-      font-size: 32px;
-      margin-bottom: 15px;
-    }
-    .contact-info p {
-      margin: 10px 0;
-      font-size: 16px;
-    }
-    .contact-info i {
-      color: #e60000;
-      margin-right: 10px;
-    }
-    .map {
-      flex: 1;
-    }
-    iframe {
-      width: 100%;
-      height: 350px;
-      border: 0;
-      border-radius: 10px;
-    }
-  </style>
+        * {
+            scroll-behavior: smooth;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .glass-dark {
+            background: rgba(26, 26, 46, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #FF6B6B, #4ECDC4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        .btn-gradient {
+            background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+            transition: all 0.3s ease;
+        }
+        .btn-gradient:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
+        }
+        .category-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255, 107, 107, 0.8), rgba(78, 205, 196, 0.8));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: inherit;
+        }
+        .category-card:hover::before {
+            opacity: 1;
+        }
+        .dark .category-card::before {
+            background: linear-gradient(135deg, rgba(255, 107, 107, 0.6), rgba(78, 205, 196, 0.6));
+        }
+    </style>
 </head>
-<body>
-  
-  <section class="contact-section">
-    <div class="contact-info">
-      <h3>Best Anime Shop</h3>
-      <h2>Contact us</h2>
-      <hr style="border: 2px solid #e60000; width: 150px; margin: 15px 0;">
-      <p><i class="fa fa-phone"style="font-size:24px;color:red"></i> Tel: 096 889 3342</p>
-      <p><i class="material-icons" style="font-size:24px;color:red">pin_drop</i> Address: (Borey Sorla), Street 371, Phnom Penh</p>
-      <p><i class="fa fa-facebook-f"style="font-size:24px;color:red"></i> Facebook: Best Anime Shop</p>
-      <p><i class="fa fa-telegram"style="font-size:24px;color:red"></i> Telegram: 096 889 3342</p>
-    </div>
+<body class="bg-gray-50 dark:bg-darker transition-colors duration-300">
+    <!-- Sticky Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-40 glass-dark bg-white/80 dark:bg-darker/90 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <img src="img/BAS_Cat_Logo_500x.webp" alt="Best Anime Shop" class="h-10 w-10 rounded-full">
+                        <span class="text-xl font-bold gradient-text hidden sm:block">Best Anime Shop</span>
+                    </a>
+                </div>
 
-    <div class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3909.0139085080614!2d104.88308358798996!3d11.550859775719442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951add5e2cd81%3A0x171e0b69c7c6f7ba!2sPasserelles%20num%C3%A9riques%20Cambodia%20(PNC)!5e0!3m2!1sen!2skh!4v1759568382766!5m2!1sen!2skh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-  </section>
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">Home</a>
+                    <a href="Figure.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">Figures</a>
+                    <a href="Poster.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">Posters</a>
+                    <a href="Blind Box.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">Blind Box</a>
+                    <a href="Clothing.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">Clothing</a>
+                    <a href="Jewelry.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium">Jewelry</a>
+                    <a href="Contact.html" class="text-primary dark:text-primary font-medium">Contact</a>
+                </div>
 
- <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-    footer {
-      background: #edecec;
-      padding: 40px 80px;
-    }
-    .footer-container {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-    .footer-left, .footer-middle, .footer-right {
-      flex: 1;
-      min-width: 250px;
-      margin: 10px;
-    }
-    .footer-left img {
-      width: 180px;
-    }
-    .footer-left p {
-      margin-top: 15px;
-      color: #333;
-      line-height: 1.5;
-    }
-    .footer-middle h3,
-    .footer-right h3 {
-      color: #e60000;
-      margin-bottom: 15px;
-    }
-    .footer-middle ul,
-    .footer-right ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .footer-middle li,
-    .footer-right li {
-      margin: 8px 0;
-      color: #333;
-    }
-    .footer-middle li::before {
-      content: "❯";
-      color: #e60000;
-      margin-right: 8px;
-    }
-    .footer-right li {
-      display: flex;
-      align-items: center;
-    }
-    .footer-right li span {
-      margin-left: 8px;
-    }
-    .footer-bottom {
-      text-align: center;
-      border-top: 1px solid #ddd;
-      margin-top: 30px;
-      padding-top: 15px;
-      font-size: 14px;
-      color: #666;
-    }
-    .footer-bottom a {
-      color: #555;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  </style>
-</head>
-<body>
+                <!-- Right Side Actions -->
+                <div class="flex items-center space-x-4">
+                    <!-- Search Button -->
+                    <button id="search-toggle" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">
+                        <i class="fas fa-search text-xl"></i>
+                    </button>
 
-  <footer>
-    <div class="footer-container">
-      <!-- Left -->
-      <div class="footer-left">
-        <img src="./img/BAS_Cat_Logo_500x.webp" alt="Best Anime Shop logo Logo">
-        <p>
-          <strong>Best Anime Shop</strong> sells you the biggest assortment of Anime collectibles 
-          including clothing, figures, statues, toy weapons, jewelries, cases, 
-          decor accessories and many more.
-        </p>
-      </div>
+                    <!-- Dark Mode Toggle -->
+                    <button id="dark-mode-toggle" class="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">
+                        <i class="fas fa-moon text-xl dark:hidden"></i>
+                        <i class="fas fa-sun text-xl hidden dark:block"></i>
+                    </button>
 
-      <!-- Middle -->
-      <div class="footer-middle">
-        <h3>Browse Categories</h3>
-        <ul>
-          <li>Figure & Statue</li>
-          <li>Poster</li>
-          <li>Blind Box</li>
-          <li>Clothing</li>
-          <li>Jewelry</li>
-          <li>Others</li>
-        </ul>
-      </div>
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-toggle" class="md:hidden text-gray-700 dark:text-gray-300">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
 
-      <!-- Right -->
-      <div class="footer-right">
-        <h3>Contact Us</h3>
-        <ul>
-          <li><i class="fa fa-phone" style="font-size:24px;color:red"></i>
-<br> <span>Call 096 889 3342</span></li>
-          <li><i class="material-icons" style="font-size:24px;color:red">place</i> <span> (Borey Sorla), Street 371, Phnom Penh</span></li>
-          <li><i class="fa fa-facebook-f" style="font-size:24px;color:red"></i> <span> Check our Facebook</span></li>
-          <li><i class="fa fa-telegram" style="font-size:24px;color:red"></i> <span> Chat on Telegram</span></li>
-        </ul>
-      </div>
-    </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-darker border-t dark:border-gray-700">
+            <div class="px-4 py-3 space-y-2">
+                <a href="index.html" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary">Home</a>
+                <a href="Figure.html" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary">Figures</a>
+                <a href="Poster.html" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary">Posters</a>
+                <a href="Blind Box.html" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary">Blind Box</a>
+                <a href="Clothing.html" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary">Clothing</a>
+                <a href="Jewelry.html" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary">Jewelry</a>
+                <a href="Contact.html" class="block py-2 text-primary font-medium">Contact</a>
+                <a href="wishlist.html" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-primary">Wishlist</a>
+            </div>
+        </div>
 
-    <!-- Bottom -->
-    <div class="footer-bottom">
-      Best Anime Shop © 2022 All Rights Reserved. Website by <a href="#">Daniel</a>.
-    </div>
-  </footer>
- 
+        <!-- Search Bar (Hidden by default) -->
+        <div id="search-bar" class="hidden bg-white dark:bg-darker border-t dark:border-gray-700">
+            <div class="max-w-7xl mx-auto px-4 py-4">
+                <div class="relative">
+                    <input type="text" id="search-input" placeholder="Search for products..." class="w-full px-4 py-2 pl-10 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary">
+                    <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
 
+    <!-- Main Content -->
+    <section class="pt-24 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Page Header -->
+            <div class="text-center mb-12 animate-slide-up">
+                <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                    Contact <span class="gradient-text">Us</span>
+                </h1>
+                <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    Get in touch with us for any questions or inquiries
+                </p>
+            </div>
+
+            <!-- Contact Content -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <div class="bg-white dark:bg-darker rounded-2xl p-8 card-hover shadow-lg">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-phone text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Call Us</h3>
+                                <p class="text-gray-600 dark:text-gray-300">096 889 3342</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white dark:bg-darker rounded-2xl p-8 card-hover shadow-lg">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Location</h3>
+                                <p class="text-gray-600 dark:text-gray-300">(Borey Sorla), Street 371, Phnom Penh</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white dark:bg-darker rounded-2xl p-8 card-hover shadow-lg">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-envelope text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Email</h3>
+                                <p class="text-gray-600 dark:text-gray-300">support@bestanimeshop.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white dark:bg-darker rounded-2xl p-8 card-hover shadow-lg">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fab fa-facebook-f text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Facebook</h3>
+                                <p class="text-gray-600 dark:text-gray-300">Check our Facebook page</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white dark:bg-darker rounded-2xl p-8 card-hover shadow-lg">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fab fa-telegram text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Telegram</h3>
+                                <p class="text-gray-600 dark:text-gray-300">Chat with us on Telegram</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white dark:bg-darker rounded-2xl p-8 card-hover shadow-lg">
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Send us a message</h2>
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Your Name</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Enter your name">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Your Email</label>
+                            <input type="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Enter your email">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Subject</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Enter subject">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message</label>
+                            <textarea rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Enter your message"></textarea>
+                        </div>
+                        <button type="submit" class="w-full btn-gradient text-white py-3 rounded-lg font-semibold">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 dark:bg-darker text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Footer Left -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <img src="img/BAS_Cat_Logo_500x.webp" alt="Best Anime Shop" class="h-12 w-12 rounded-full">
+                        <span class="text-2xl font-bold gradient-text">Best Anime Shop</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Your ultimate destination for premium anime collectibles. We offer the biggest assortment of anime figures, statues, posters, clothing, jewelry, and more.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Footer Middle -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-primary">Browse Categories</h3>
+                    <ul class="space-y-3">
+                        <li><a href="Figure.html" class="text-gray-400 hover:text-white transition-colors flex items-center"><i class="fas fa-chevron-right text-primary mr-2 text-sm"></i>Figure & Statue</a></li>
+                        <li><a href="Poster.html" class="text-gray-400 hover:text-white transition-colors flex items-center"><i class="fas fa-chevron-right text-primary mr-2 text-sm"></i>Poster</a></li>
+                        <li><a href="Blind Box.html" class="text-gray-400 hover:text-white transition-colors flex items-center"><i class="fas fa-chevron-right text-primary mr-2 text-sm"></i>Blind Box</a></li>
+                        <li><a href="Clothing.html" class="text-gray-400 hover:text-white transition-colors flex items-center"><i class="fas fa-chevron-right text-primary mr-2 text-sm"></i>Clothing</a></li>
+                        <li><a href="Jewelry.html" class="text-gray-400 hover:text-white transition-colors flex items-center"><i class="fas fa-chevron-right text-primary mr-2 text-sm"></i>Jewelry</a></li>
+                        <li><a href="Contact.html" class="text-gray-400 hover:text-white transition-colors flex items-center"><i class="fas fa-chevron-right text-primary mr-2 text-sm"></i>Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Right -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-primary">Contact Us</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-phone text-primary mt-1"></i>
+                            <div>
+                                <p class="text-gray-400">Call Us</p>
+                                <p class="text-white font-semibold">096 889 3342</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-map-marker-alt text-primary mt-1"></i>
+                            <div>
+                                <p class="text-gray-400">Location</p>
+                                <p class="text-white font-semibold">(Borey Sorla), Street 371, Phnom Penh</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-envelope text-primary mt-1"></i>
+                            <div>
+                                <p class="text-gray-400">Email</p>
+                                <p class="text-white font-semibold">support@bestanimeshop.com</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2025 Best Anime Shop. All Rights Reserved. Website by Darinhil
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Dark mode toggle
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const html = document.documentElement;
+
+        // Check for saved dark mode preference
+        if (localStorage.getItem('darkMode') === 'true' || 
+            (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.setItem('darkMode', html.classList.contains('dark'));
+        });
+
+        // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Search toggle
+        const searchToggle = document.getElementById('search-toggle');
+        const searchBar = document.getElementById('search-bar');
+
+        searchToggle.addEventListener('click', () => {
+            searchBar.classList.toggle('hidden');
+            if (!searchBar.classList.contains('hidden')) {
+                document.getElementById('search-input').focus();
+            }
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('search-input');
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            console.log('Searching for:', searchTerm);
+        });
+    </script>
+    <script src="wishlist.js"></script>
 </body>
 </html>
